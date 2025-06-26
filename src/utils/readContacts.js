@@ -9,6 +9,6 @@ export const readContacts = async () => {
     if (error.code === 'ENOENT') {
       return [];
     }
-    console.log(error.massage);
+    console.log(error.message);
   }
 };
