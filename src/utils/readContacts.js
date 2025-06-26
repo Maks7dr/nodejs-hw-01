@@ -1,5 +1,5 @@
 import { PATH_DB } from '../constants/contacts.js';
-const fs = require('node:fs/promises');
+import * as fs from 'node:fs/promises';
 
 export const readContacts = async () => {
   try {
@@ -10,6 +10,5 @@ export const readContacts = async () => {
       return [];
     }
     console.log(error.massage);
-    throw error;
   }
 };

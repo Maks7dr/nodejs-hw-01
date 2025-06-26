@@ -1,5 +1,5 @@
 import { PATH_DB } from '../constants/contacts.js';
-const fs = require('node:fs/promises');
+import fs from 'node:fs/promises';
 
 export const writeContacts = async (updatedContacts) => {
   try {
@@ -7,6 +7,5 @@ export const writeContacts = async (updatedContacts) => {
     await fs.writeFile(PATH_DB, dataToWrite, 'utf-8');
   } catch (error) {
     console.error(error.message);
-    throw error;
   }
 };
